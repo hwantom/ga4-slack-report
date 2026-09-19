@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GA4 Daily Analytics Dashboard</title>
+  <meta name="description" content="Google Analytics 4 일간 핵심 지표 및 최근 7일 트렌드 분석 대시보드">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div class="dashboard-wrapper">
+    <!-- Header -->
+    <header class="dashboard-header" id="headerSection">
+      <div class="header-left">
+        <div class="brand-badge">
+          <span class="pulse-dot"></span>
+          <span class="badge-text">GA4 Live Report</span>
+        </div>
+        <h1 class="dashboard-title">Daily Performance Dashboard</h1>
+        <p class="dashboard-subtitle">어제 실적 및 최근 7일 주요 트래픽 분석</p>
+      </div>
+      <div class="header-right">
+        <div class="update-info-card" id="updateCard">
+          <span class="info-label">최종 갱신 시각</span>
+          <span class="info-time" id="lastUpdated">데이터 불러오는 중...</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- KPI Summary Grid -->
+    <section class="kpi-grid" id="kpiSection" aria-label="핵심 KPI 지표">
+      <!-- Users Card -->
+      <article class="kpi-card" id="cardUsers">
+        <div class="card-header">
+          <span class="card-icon user-icon">👥</span>
+          <span class="card-title">Users</span>
+        </div>
+        <div class="card-body">
+          <div class="metric-value" id="valUsers">-</div>
+          <div class="metric-change" id="badgeUsers">
+            <span class="change-text">-</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="prev-stat" id="prevUsers">전일: -</span>
+        </div>
+      </article>
+
+      <!-- Sessions Card -->
+      <article class="kpi-card" id="cardSessions">
+        <div class="card-header">
+          <span class="card-icon session-icon">🔄</span>
+          <span class="card-title">Sessions</span>
+        </div>
+        <div class="card-body">
+          <div class="metric-value" id="valSessions">-</div>
+          <div class="metric-change" id="badgeSessions">
+            <span class="change-text">-</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="prev-stat" id="prevSessions">전일: -</span>
+        </div>
+      </article>
+
+      <!-- Page Views Card -->
+      <article class="kpi-card" id="cardPageViews">
+        <div class="card-header">
+          <span class="card-icon pageview-icon">👀</span>
+          <span class="card-title">Page Views</span>
+        </div>
+        <div class="card-body">
+          <div class="metric-value" id="valPageViews">-</div>
+          <div class="metric-change" id="badgePageViews">
+            <span class="change-text">-</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="prev-stat" id="prevPageViews">전일: -</span>
+        </div>
+      </article>
+
+      <!-- Key Events Card -->
+      <article class="kpi-card" id="cardKeyEvents">
+        <div class="card-header">
+          <span class="card-icon event-icon">🎯</span>
+          <span class="card-title">Key Events</span>
+        </div>
+        <div class="card-body">
+          <div class="metric-value" id="valKeyEvents">-</div>
+          <div class="metric-change" id="badgeKeyEvents">
+            <span class="change-text">-</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="prev-stat" id="prevKeyEvents">전일: -</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Chart Section: 7-Day Trend -->
+    <section class="chart-section" id="trendSection">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">최근 7일 사용자 추이</h2>
+          <p class="section-desc">일별 활성 사용자(Users) 및 세션(Sessions) 변동 흐름</p>
+        </div>
+        <div class="chart-legend-custom">
+          <span class="legend-item"><span class="dot users-dot"></span>Users</span>
+          <span class="legend-item"><span class="dot sessions-dot"></span>Sessions</span>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-container">
+          <canvas id="trendChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rank Section: Sources & Pages -->
+    <section class="insights-grid" id="insightsSection">
+      <!-- Traffic Sources -->
+      <article class="table-card" id="sourceCard">
+        <div class="card-header-styled">
+          <div class="title-wrap">
+            <span class="badge-icon">🌐</span>
+            <h2 class="section-title">Top Traffic Sources</h2>
+          </div>
+          <span class="sub-tag">최근 7일 TOP 5</span>
+        </div>
+        <div class="table-container">
+          <table class="data-table" id="sourceTable">
+            <thead>
+              <tr>
+                <th style="width: 10%;">#</th>
+                <th style="width: 50%;">Source</th>
+                <th style="width: 20%; text-align: right;">Sessions</th>
+                <th style="width: 20%; text-align: right;">Users</th>
+              </tr>
+            </thead>
+            <tbody id="sourceTableBody">
+              <tr><td colspan="4" class="loading-td">데이터 로딩 중...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <!-- Top Pages -->
+      <article class="table-card" id="pagesCard">
+        <div class="card-header-styled">
+          <div class="title-wrap">
+            <span class="badge-icon">📄</span>
+            <h2 class="section-title">Top Pages</h2>
+          </div>
+          <span class="sub-tag">최근 7일 TOP 5</span>
+        </div>
+        <div class="table-container">
+          <table class="data-table" id="pagesTable">
+            <thead>
+              <tr>
+                <th style="width: 10%;">#</th>
+                <th style="width: 50%;">Page Path</th>
+                <th style="width: 20%; text-align: right;">Views</th>
+                <th style="width: 20%; text-align: right;">Users</th>
+              </tr>
+            </thead>
+            <tbody id="pagesTableBody">
+              <tr><td colspan="4" class="loading-td">데이터 로딩 중...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+      <p>GA4 Daily Automated Report • Powered by Google Analytics Data API</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

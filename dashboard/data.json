@@ -1,0 +1,126 @@
+{
+  "updated_at": "2026-09-19 17:54:16 (KST)",
+  "kpi": {
+    "users": 10,
+    "sessions": 14,
+    "page_views": 18,
+    "key_events": 0
+  },
+  "changes": {
+    "users": {
+      "current": 10,
+      "previous": 3,
+      "rate": 233.3,
+      "rate_str": "▲ 233.3%"
+    },
+    "sessions": {
+      "current": 14,
+      "previous": 4,
+      "rate": 250.0,
+      "rate_str": "▲ 250.0%"
+    },
+    "page_views": {
+      "current": 18,
+      "previous": 6,
+      "rate": 200.0,
+      "rate_str": "▲ 200.0%"
+    },
+    "key_events": {
+      "current": 0,
+      "previous": 0,
+      "rate": 0.0,
+      "rate_str": "- 0.0%"
+    }
+  },
+  "trends_7d": [
+    {
+      "date": "2026-09-12",
+      "users": 9,
+      "sessions": 15
+    },
+    {
+      "date": "2026-09-13",
+      "users": 18,
+      "sessions": 22
+    },
+    {
+      "date": "2026-09-14",
+      "users": 3,
+      "sessions": 4
+    },
+    {
+      "date": "2026-09-15",
+      "users": 8,
+      "sessions": 12
+    },
+    {
+      "date": "2026-09-16",
+      "users": 8,
+      "sessions": 11
+    },
+    {
+      "date": "2026-09-17",
+      "users": 3,
+      "sessions": 4
+    },
+    {
+      "date": "2026-09-18",
+      "users": 10,
+      "sessions": 14
+    }
+  ],
+  "traffic_sources": [
+    {
+      "source": "qr",
+      "sessions": 64,
+      "users": 44
+    },
+    {
+      "source": "(direct)",
+      "sessions": 6,
+      "users": 6
+    },
+    {
+      "source": "ig",
+      "sessions": 3,
+      "users": 3
+    },
+    {
+      "source": "marker",
+      "sessions": 3,
+      "users": 2
+    },
+    {
+      "source": "map",
+      "sessions": 2,
+      "users": 2
+    }
+  ],
+  "top_pages": [
+    {
+      "path": "/index.html",
+      "views": 75,
+      "users": 46
+    },
+    {
+      "path": "/map.html",
+      "views": 42,
+      "users": 26
+    },
+    {
+      "path": "/shop/jeonggeum",
+      "views": 7,
+      "users": 5
+    },
+    {
+      "path": "/shop/hyoja365",
+      "views": 6,
+      "users": 2
+    },
+    {
+      "path": "/shop/wonjojung",
+      "views": 6,
+      "users": 4
+    }
+  ]
+}

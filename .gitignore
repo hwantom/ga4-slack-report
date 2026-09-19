@@ -1,0 +1,16 @@
+# Credentials & Secrets
+.env
+*.env
+service-account.json
+ga4-daily-report-*.json
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Dashboard data should be committed for GitHub Pages if updated
+!dashboard/data.json
