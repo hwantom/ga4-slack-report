@@ -36,9 +36,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Create Service Account Key
+      - name: Create and Validate Service Account Key
         run: |
-          echo "${{ secrets.GCP_SA_KEY }}" > service-account.json
+          echo "${{ secrets.GCP_SA_KEY_BASE64 }}" | base64 --decode > service-account.json
+          python -c "import json; json.load(open('service-account.json')); print('Service account JSON valid')"
 
       - name: Run GA4 Report & Update data.json
         env:
