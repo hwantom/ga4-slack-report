@@ -37,9 +37,34 @@ jobs:
           pip install -r requirements.txt
 
       - name: Create and Validate Service Account Key
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         run: |
-          echo "${{ secrets.GCP_SA_KEY_BASE64 }}" | base64 --decode > service-account.json
-          python -c "import json; json.load(open('service-account.json')); print('Service account JSON valid')"
+          python - <<'PY'
+          import os
+          import json
+
+          raw = os.environ.get("GCP_SA_KEY", "")
+
+          if not raw:
+              raise SystemExit("GCP_SA_KEY secret is empty")
+
+          data = json.loads(raw)
+
+          if data.get("type") != "service_account":
+              raise SystemExit("Invalid service account type")
+
+          if not data.get("private_key"):
+              raise SystemExit("private_key is missing")
+
+          if not data.get("client_email"):
+              raise SystemExit("client_email is missing")
+
+          with open("service-account.json", "w", encoding="utf-8") as f:
+              json.dump(data, f)
+
+          print("Service account JSON valid")
+          PY
 
       - name: Run GA4 Report & Update data.json
         env:
