@@ -9,6 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>
+    // 초기 테마 설정 (FOUC 깜빡임 방지)
+    (function() {
+      const savedTheme = localStorage.getItem('ga4_theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', initialTheme);
+    })();
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -24,6 +33,10 @@
         <p class="dashboard-subtitle">어제 실적 및 최근 7일 주요 트래픽 분석</p>
       </div>
       <div class="header-right">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="테마 전환" title="테마 전환">
+          <span class="theme-icon" id="themeIcon">☀️</span>
+          <span class="theme-text" id="themeText">라이트 모드</span>
+        </button>
         <div class="update-info-card" id="updateCard">
           <span class="info-label">최종 갱신 시각</span>
           <span class="info-time" id="lastUpdated">데이터 불러오는 중...</span>

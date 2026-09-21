@@ -1,6 +1,7 @@
 // GA4 Web Dashboard Application Logic
 
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeController();
   loadDashboardData();
 });
 
@@ -101,10 +102,75 @@ function renderKpiCard(idSuffix, currentValue, changeData) {
   }
 }
 
+// Theme Controller
+function initThemeController() {
+  const toggleBtn = document.getElementById('themeToggleBtn');
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+  updateThemeButtonUI(currentTheme);
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const activeTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const nextTheme = activeTheme === 'dark' ? 'light' : 'dark';
+      
+      document.documentElement.setAttribute('data-theme', nextTheme);
+      localStorage.setItem('ga4_theme', nextTheme);
+      updateThemeButtonUI(nextTheme);
+      applyChartTheme(nextTheme);
+    });
+  }
+}
+
+function updateThemeButtonUI(theme) {
+  const iconElem = document.getElementById('themeIcon');
+  const textElem = document.getElementById('themeText');
+  if (!iconElem || !textElem) return;
+
+  if (theme === 'light') {
+    iconElem.textContent = '🌙';
+    textElem.textContent = '다크 모드';
+  } else {
+    iconElem.textContent = '☀️';
+    textElem.textContent = '라이트 모드';
+  }
+}
+
+function getChartThemeColors(theme) {
+  const isLight = theme === 'light';
+  return {
+    pointBorderColor: isLight ? '#ffffff' : '#0a0e17',
+    gridX: isLight ? 'rgba(0, 0, 0, 0.05)' : 'rgba(255, 255, 255, 0.04)',
+    gridY: isLight ? 'rgba(0, 0, 0, 0.06)' : 'rgba(255, 255, 255, 0.06)',
+    tickColor: isLight ? '#64748b' : '#9ca3af',
+    tooltipBg: isLight ? 'rgba(255, 255, 255, 0.96)' : 'rgba(17, 24, 39, 0.95)',
+    tooltipTitle: isLight ? '#0f172a' : '#f9fafb',
+    tooltipBody: isLight ? '#334155' : '#e5e7eb',
+    tooltipBorder: isLight ? 'rgba(203, 213, 225, 0.8)' : 'rgba(255, 255, 255, 0.1)'
+  };
+}
+
+function applyChartTheme(theme) {
+  if (!chartInstance) return;
+  const colors = getChartThemeColors(theme);
+  chartInstance.data.datasets[0].pointBorderColor = colors.pointBorderColor;
+  chartInstance.data.datasets[1].pointBorderColor = colors.pointBorderColor;
+  chartInstance.options.scales.x.grid.color = colors.gridX;
+  chartInstance.options.scales.x.ticks.color = colors.tickColor;
+  chartInstance.options.scales.y.grid.color = colors.gridY;
+  chartInstance.options.scales.y.ticks.color = colors.tickColor;
+  chartInstance.options.plugins.tooltip.backgroundColor = colors.tooltipBg;
+  chartInstance.options.plugins.tooltip.titleColor = colors.tooltipTitle;
+  chartInstance.options.plugins.tooltip.bodyColor = colors.tooltipBody;
+  chartInstance.options.plugins.tooltip.borderColor = colors.tooltipBorder;
+  chartInstance.update();
+}
+
 let chartInstance = null;
 
 function renderTrendChart(trends) {
   const ctx = document.getElementById('trendChart').getContext('2d');
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+  const themeColors = getChartThemeColors(currentTheme);
 
   // 날짜 레이블 (MM/DD 형태)
   const labels = trends.map(item => {
@@ -144,7 +210,7 @@ function renderTrendChart(trends) {
           tension: 0.35,
           borderWidth: 2.5,
           pointBackgroundColor: '#38bdf8',
-          pointBorderColor: '#0a0e17',
+          pointBorderColor: themeColors.pointBorderColor,
           pointBorderWidth: 2,
           pointRadius: 4,
           pointHoverRadius: 6,
@@ -158,7 +224,7 @@ function renderTrendChart(trends) {
           tension: 0.35,
           borderWidth: 2.5,
           pointBackgroundColor: '#a855f7',
-          pointBorderColor: '#0a0e17',
+          pointBorderColor: themeColors.pointBorderColor,
           pointBorderWidth: 2,
           pointRadius: 4,
           pointHoverRadius: 6,
@@ -177,10 +243,10 @@ function renderTrendChart(trends) {
           display: false // 커스텀 레전드 사용
         },
         tooltip: {
-          backgroundColor: 'rgba(17, 24, 39, 0.95)',
-          titleColor: '#f9fafb',
-          bodyColor: '#e5e7eb',
-          borderColor: 'rgba(255, 255, 255, 0.1)',
+          backgroundColor: themeColors.tooltipBg,
+          titleColor: themeColors.tooltipTitle,
+          bodyColor: themeColors.tooltipBody,
+          borderColor: themeColors.tooltipBorder,
           borderWidth: 1,
           padding: 12,
           cornerRadius: 8,
@@ -196,11 +262,11 @@ function renderTrendChart(trends) {
       scales: {
         x: {
           grid: {
-            color: 'rgba(255, 255, 255, 0.04)',
+            color: themeColors.gridX,
             drawBorder: false,
           },
           ticks: {
-            color: '#9ca3af',
+            color: themeColors.tickColor,
             font: {
               family: 'Plus Jakarta Sans',
               size: 11
@@ -210,11 +276,11 @@ function renderTrendChart(trends) {
         y: {
           beginAtZero: true,
           grid: {
-            color: 'rgba(255, 255, 255, 0.06)',
+            color: themeColors.gridY,
             drawBorder: false,
           },
           ticks: {
-            color: '#9ca3af',
+            color: themeColors.tickColor,
             precision: 0,
             font: {
               family: 'JetBrains Mono',
