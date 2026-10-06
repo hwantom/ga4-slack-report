@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-10-05 12:32:50 (KST)",
+  "updated_at": "2026-10-06 13:20:39 (KST)",
   "kpi": {
-    "users": 11,
-    "sessions": 14,
-    "page_views": 17,
+    "users": 17,
+    "sessions": 25,
+    "page_views": 63,
     "key_events": 0
   },
   "changes": {
     "users": {
-      "current": 11,
-      "previous": 7,
-      "rate": 57.1,
-      "rate_str": "▲ 57.1%"
+      "current": 17,
+      "previous": 11,
+      "rate": 54.5,
+      "rate_str": "▲ 54.5%"
     },
     "sessions": {
-      "current": 14,
-      "previous": 9,
-      "rate": 55.6,
-      "rate_str": "▲ 55.6%"
+      "current": 25,
+      "previous": 14,
+      "rate": 78.6,
+      "rate_str": "▲ 78.6%"
     },
     "page_views": {
-      "current": 17,
-      "previous": 21,
-      "rate": -19.0,
-      "rate_str": "▼ 19.0%"
+      "current": 63,
+      "previous": 17,
+      "rate": 270.6,
+      "rate_str": "▲ 270.6%"
     },
     "key_events": {
       "current": 0,
@@ -33,11 +33,6 @@
     }
   },
   "trends_7d": [
-    {
-      "date": "2026-09-28",
-      "users": 3,
-      "sessions": 7
-    },
     {
       "date": "2026-09-29",
       "users": 2,
@@ -67,23 +62,23 @@
       "date": "2026-10-04",
       "users": 11,
       "sessions": 14
+    },
+    {
+      "date": "2026-10-05",
+      "users": 17,
+      "sessions": 25
     }
   ],
   "traffic_sources": [
     {
       "source": "qr",
-      "sessions": 53,
-      "users": 39
+      "sessions": 67,
+      "users": 50
     },
     {
       "source": "(direct)",
-      "sessions": 5,
-      "users": 5
-    },
-    {
-      "source": "ig",
-      "sessions": 2,
-      "users": 2
+      "sessions": 11,
+      "users": 9
     },
     {
       "source": "map",
@@ -94,33 +89,38 @@
       "source": "(not set)",
       "sessions": 1,
       "users": 1
+    },
+    {
+      "source": "direct_slug_url",
+      "sessions": 1,
+      "users": 1
     }
   ],
   "top_pages": [
     {
       "path": "/index.html",
-      "views": 58,
-      "users": 41
+      "views": 74,
+      "users": 52
     },
     {
       "path": "/map.html",
-      "views": 37,
-      "users": 17
-    },
-    {
-      "path": "/",
-      "views": 7,
-      "users": 5
+      "views": 50,
+      "users": 25
     },
     {
       "path": "/shop/jeonggeum",
-      "views": 6,
-      "users": 1
+      "views": 9,
+      "users": 2
     },
     {
-      "path": "/markets.html",
-      "views": 4,
-      "users": 1
+      "path": "/shop/dosirakcafe",
+      "views": 7,
+      "users": 2
+    },
+    {
+      "path": "/",
+      "views": 6,
+      "users": 4
     }
   ]
 }
