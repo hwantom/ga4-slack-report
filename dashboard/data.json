@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-10-11 12:24:48 (KST)",
+  "updated_at": "2026-10-12 12:48:06 (KST)",
   "kpi": {
-    "users": 10,
-    "sessions": 11,
-    "page_views": 36,
+    "users": 9,
+    "sessions": 16,
+    "page_views": 119,
     "key_events": 0
   },
   "changes": {
     "users": {
-      "current": 10,
-      "previous": 16,
-      "rate": -37.5,
-      "rate_str": "▼ 37.5%"
+      "current": 9,
+      "previous": 10,
+      "rate": -10.0,
+      "rate_str": "▼ 10.0%"
     },
     "sessions": {
-      "current": 11,
-      "previous": 23,
-      "rate": -52.2,
-      "rate_str": "▼ 52.2%"
+      "current": 16,
+      "previous": 11,
+      "rate": 45.5,
+      "rate_str": "▲ 45.5%"
     },
     "page_views": {
-      "current": 36,
-      "previous": 32,
-      "rate": 12.5,
-      "rate_str": "▲ 12.5%"
+      "current": 119,
+      "previous": 38,
+      "rate": 213.2,
+      "rate_str": "▲ 213.2%"
     },
     "key_events": {
       "current": 0,
@@ -33,11 +33,6 @@
     }
   },
   "trends_7d": [
-    {
-      "date": "2026-10-04",
-      "users": 11,
-      "sessions": 14
-    },
     {
       "date": "2026-10-05",
       "users": 17,
@@ -62,55 +57,65 @@
       "date": "2026-10-10",
       "users": 10,
       "sessions": 11
+    },
+    {
+      "date": "2026-10-11",
+      "users": 9,
+      "sessions": 16
     }
   ],
   "traffic_sources": [
     {
       "source": "qr",
-      "sessions": 70,
-      "users": 51
+      "sessions": 64,
+      "users": 44
     },
     {
       "source": "(direct)",
-      "sessions": 12,
-      "users": 9
-    },
-    {
-      "source": "(not set)",
-      "sessions": 6,
-      "users": 5
+      "sessions": 20,
+      "users": 15
     },
     {
       "source": "direct_slug_url",
+      "sessions": 1,
+      "users": 1
+    },
+    {
+      "source": "map",
+      "sessions": 1,
+      "users": 1
+    },
+    {
+      "source": "marker",
       "sessions": 1,
       "users": 1
     }
   ],
   "top_pages": [
     {
-      "path": "/index.html",
-      "views": 61,
-      "users": 53
-    },
-    {
       "path": "/map.html",
-      "views": 49,
-      "users": 28
+      "views": 70,
+      "users": 30
     },
     {
-      "path": "/shop/dosirakcafe",
-      "views": 6,
+      "path": "/index.html",
+      "views": 63,
+      "users": 48
+    },
+    {
+      "path": "/markets.html",
+      "views": 27,
       "users": 2
     },
     {
-      "path": "/shop/sonmatgimbap",
-      "views": 6,
-      "users": 1
+      "path": "/stores.html",
+      "views": 27,
+      "users": 2
     },
     {
-      "path": "/shop/originalgrandma",
-      "views": 5,
-      "users": 2
+      "path": "/",
+      "views": 11,
+      "users": 5
     }
   ]
 }
