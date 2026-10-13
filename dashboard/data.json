@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-10-12 12:48:06 (KST)",
+  "updated_at": "2026-10-13 13:59:43 (KST)",
   "kpi": {
-    "users": 9,
-    "sessions": 16,
-    "page_views": 119,
+    "users": 5,
+    "sessions": 7,
+    "page_views": 22,
     "key_events": 0
   },
   "changes": {
     "users": {
-      "current": 9,
-      "previous": 10,
-      "rate": -10.0,
-      "rate_str": "▼ 10.0%"
+      "current": 5,
+      "previous": 9,
+      "rate": -44.4,
+      "rate_str": "▼ 44.4%"
     },
     "sessions": {
-      "current": 16,
-      "previous": 11,
-      "rate": 45.5,
-      "rate_str": "▲ 45.5%"
+      "current": 7,
+      "previous": 16,
+      "rate": -56.2,
+      "rate_str": "▼ 56.2%"
     },
     "page_views": {
-      "current": 119,
-      "previous": 38,
-      "rate": 213.2,
-      "rate_str": "▲ 213.2%"
+      "current": 22,
+      "previous": 119,
+      "rate": -81.5,
+      "rate_str": "▼ 81.5%"
     },
     "key_events": {
       "current": 0,
@@ -34,11 +34,6 @@
   },
   "trends_7d": [
     {
-      "date": "2026-10-05",
-      "users": 17,
-      "sessions": 25
-    },
-    {
       "date": "2026-10-06",
       "users": 4,
       "sessions": 5
@@ -47,6 +42,11 @@
       "date": "2026-10-07",
       "users": 4,
       "sessions": 7
+    },
+    {
+      "date": "2026-10-08",
+      "users": 3,
+      "sessions": 3
     },
     {
       "date": "2026-10-09",
@@ -62,26 +62,31 @@
       "date": "2026-10-11",
       "users": 9,
       "sessions": 16
+    },
+    {
+      "date": "2026-10-12",
+      "users": 5,
+      "sessions": 7
     }
   ],
   "traffic_sources": [
     {
       "source": "qr",
-      "sessions": 64,
-      "users": 44
+      "sessions": 51,
+      "users": 36
     },
     {
       "source": "(direct)",
-      "sessions": 20,
-      "users": 15
-    },
-    {
-      "source": "direct_slug_url",
-      "sessions": 1,
-      "users": 1
+      "sessions": 16,
+      "users": 12
     },
     {
       "source": "map",
+      "sessions": 3,
+      "users": 3
+    },
+    {
+      "source": "direct_slug_url",
       "sessions": 1,
       "users": 1
     },
@@ -94,27 +99,27 @@
   "top_pages": [
     {
       "path": "/map.html",
-      "views": 70,
-      "users": 30
+      "views": 63,
+      "users": 24
     },
     {
       "path": "/index.html",
-      "views": 63,
-      "users": 48
-    },
-    {
-      "path": "/markets.html",
-      "views": 27,
-      "users": 2
+      "views": 51,
+      "users": 40
     },
     {
       "path": "/stores.html",
-      "views": 27,
+      "views": 30,
+      "users": 2
+    },
+    {
+      "path": "/markets.html",
+      "views": 28,
       "users": 2
     },
     {
       "path": "/",
-      "views": 11,
+      "views": 13,
       "users": 5
     }
   ]
