@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-10-14 12:06:26 (KST)",
+  "updated_at": "2026-10-15 11:46:22 (KST)",
   "kpi": {
-    "users": 21,
-    "sessions": 24,
-    "page_views": 94,
+    "users": 6,
+    "sessions": 8,
+    "page_views": 9,
     "key_events": 0
   },
   "changes": {
     "users": {
-      "current": 21,
-      "previous": 5,
-      "rate": 320.0,
-      "rate_str": "▲ 320.0%"
+      "current": 6,
+      "previous": 22,
+      "rate": -72.7,
+      "rate_str": "▼ 72.7%"
     },
     "sessions": {
-      "current": 24,
-      "previous": 7,
-      "rate": 242.9,
-      "rate_str": "▲ 242.9%"
+      "current": 8,
+      "previous": 24,
+      "rate": -66.7,
+      "rate_str": "▼ 66.7%"
     },
     "page_views": {
-      "current": 94,
-      "previous": 22,
-      "rate": 327.3,
-      "rate_str": "▲ 327.3%"
+      "current": 9,
+      "previous": 102,
+      "rate": -91.2,
+      "rate_str": "▼ 91.2%"
     },
     "key_events": {
       "current": 0,
@@ -33,11 +33,6 @@
     }
   },
   "trends_7d": [
-    {
-      "date": "2026-10-07",
-      "users": 4,
-      "sessions": 7
-    },
     {
       "date": "2026-10-08",
       "users": 3,
@@ -65,47 +60,52 @@
     },
     {
       "date": "2026-10-13",
-      "users": 21,
+      "users": 22,
       "sessions": 24
+    },
+    {
+      "date": "2026-10-14",
+      "users": 6,
+      "sessions": 8
     }
   ],
   "traffic_sources": [
     {
       "source": "qr",
-      "sessions": 49,
-      "users": 34
+      "sessions": 50,
+      "users": 35
     },
     {
       "source": "(direct)",
-      "sessions": 26,
+      "sessions": 25,
       "users": 22
     },
     {
-      "source": "(not set)",
-      "sessions": 21,
-      "users": 17
-    },
-    {
       "source": "l.instagram.com",
-      "sessions": 5,
-      "users": 5
+      "sessions": 7,
+      "users": 7
     },
     {
       "source": "map",
       "sessions": 4,
       "users": 3
+    },
+    {
+      "source": "(not set)",
+      "sessions": 3,
+      "users": 2
     }
   ],
   "top_pages": [
     {
-      "path": "/map.html",
-      "views": 78,
-      "users": 30
+      "path": "/index.html",
+      "views": 83,
+      "users": 52
     },
     {
-      "path": "/index.html",
-      "views": 76,
-      "users": 49
+      "path": "/map.html",
+      "views": 77,
+      "users": 30
     },
     {
       "path": "/markets.html",
@@ -119,8 +119,8 @@
     },
     {
       "path": "/",
-      "views": 21,
-      "users": 13
+      "views": 22,
+      "users": 14
     }
   ]
 }
