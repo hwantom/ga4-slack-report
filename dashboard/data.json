@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-10-25 11:45:52 (KST)",
+  "updated_at": "2026-10-26 11:43:44 (KST)",
   "kpi": {
     "users": 0,
-    "sessions": 1,
-    "page_views": 1,
+    "sessions": 0,
+    "page_views": 0,
     "key_events": 0
   },
   "changes": {
     "users": {
       "current": 0,
-      "previous": 11,
+      "previous": 0,
+      "rate": 0.0,
+      "rate_str": "- 0.0%"
+    },
+    "sessions": {
+      "current": 0,
+      "previous": 1,
       "rate": -100.0,
       "rate_str": "▼ 100.0%"
     },
-    "sessions": {
-      "current": 1,
-      "previous": 13,
-      "rate": -92.3,
-      "rate_str": "▼ 92.3%"
-    },
     "page_views": {
-      "current": 1,
-      "previous": 51,
-      "rate": -98.0,
-      "rate_str": "▼ 98.0%"
+      "current": 0,
+      "previous": 1,
+      "rate": -100.0,
+      "rate_str": "▼ 100.0%"
     },
     "key_events": {
       "current": 0,
@@ -33,11 +33,6 @@
     }
   },
   "trends_7d": [
-    {
-      "date": "2026-10-18",
-      "users": 4,
-      "sessions": 4
-    },
     {
       "date": "2026-10-19",
       "users": 3,
@@ -72,8 +67,8 @@
   "traffic_sources": [
     {
       "source": "(direct)",
-      "sessions": 25,
-      "users": 20
+      "sessions": 23,
+      "users": 19
     },
     {
       "source": "qr",
@@ -86,21 +81,21 @@
       "users": 1
     },
     {
-      "source": "marker_click",
-      "sessions": 2,
+      "source": "map",
+      "sessions": 1,
       "users": 1
     },
     {
-      "source": "m.facebook.com",
+      "source": "marker_click",
       "sessions": 1,
-      "users": 1
+      "users": 0
     }
   ],
   "top_pages": [
     {
       "path": "/",
-      "views": 35,
-      "users": 23
+      "views": 30,
+      "users": 20
     },
     {
       "path": "/index.html",
@@ -109,13 +104,13 @@
     },
     {
       "path": "/markets.html",
-      "views": 22,
+      "views": 20,
       "users": 5
     },
     {
       "path": "/map.html",
-      "views": 20,
-      "users": 5
+      "views": 18,
+      "users": 4
     },
     {
       "path": "/stores.html",
