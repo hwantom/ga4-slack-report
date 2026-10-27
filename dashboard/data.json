@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26 11:43:44 (KST)",
+  "updated_at": "2026-10-27 12:18:09 (KST)",
   "kpi": {
     "users": 0,
     "sessions": 0,
@@ -15,15 +15,15 @@
     },
     "sessions": {
       "current": 0,
-      "previous": 1,
-      "rate": -100.0,
-      "rate_str": "▼ 100.0%"
+      "previous": 0,
+      "rate": 0.0,
+      "rate_str": "- 0.0%"
     },
     "page_views": {
       "current": 0,
-      "previous": 1,
-      "rate": -100.0,
-      "rate_str": "▼ 100.0%"
+      "previous": 0,
+      "rate": 0.0,
+      "rate_str": "- 0.0%"
     },
     "key_events": {
       "current": 0,
@@ -33,11 +33,6 @@
     }
   },
   "trends_7d": [
-    {
-      "date": "2026-10-19",
-      "users": 3,
-      "sessions": 4
-    },
     {
       "date": "2026-10-20",
       "users": 6,
@@ -67,8 +62,8 @@
   "traffic_sources": [
     {
       "source": "(direct)",
-      "sessions": 23,
-      "users": 19
+      "sessions": 19,
+      "users": 17
     },
     {
       "source": "qr",
@@ -94,28 +89,28 @@
   "top_pages": [
     {
       "path": "/",
-      "views": 30,
-      "users": 20
+      "views": 26,
+      "users": 18
     },
     {
       "path": "/index.html",
-      "views": 22,
-      "users": 6
-    },
-    {
-      "path": "/markets.html",
-      "views": 20,
+      "views": 21,
       "users": 5
     },
     {
       "path": "/map.html",
-      "views": 18,
+      "views": 17,
+      "users": 3
+    },
+    {
+      "path": "/markets.html",
+      "views": 13,
       "users": 4
     },
     {
       "path": "/stores.html",
-      "views": 10,
-      "users": 5
+      "views": 7,
+      "users": 4
     }
   ]
 }
