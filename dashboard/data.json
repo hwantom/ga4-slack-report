@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28 12:33:21 (KST)",
+  "updated_at": "2026-10-29 12:55:07 (KST)",
   "kpi": {
     "users": 0,
     "sessions": 0,
@@ -34,11 +34,6 @@
   },
   "trends_7d": [
     {
-      "date": "2026-10-21",
-      "users": 2,
-      "sessions": 3
-    },
-    {
       "date": "2026-10-22",
       "users": 1,
       "sessions": 2
@@ -57,13 +52,8 @@
   "traffic_sources": [
     {
       "source": "(direct)",
-      "sessions": 12,
-      "users": 11
-    },
-    {
-      "source": "qr",
-      "sessions": 3,
-      "users": 1
+      "sessions": 11,
+      "users": 10
     },
     {
       "source": "marker",
@@ -71,8 +61,8 @@
       "users": 1
     },
     {
-      "source": "map",
-      "sessions": 1,
+      "source": "qr",
+      "sessions": 2,
       "users": 1
     },
     {
@@ -84,8 +74,8 @@
   "top_pages": [
     {
       "path": "/",
-      "views": 16,
-      "users": 12
+      "views": 15,
+      "users": 11
     },
     {
       "path": "/map.html",
@@ -93,13 +83,13 @@
       "users": 2
     },
     {
-      "path": "/index.html",
-      "views": 8,
-      "users": 4
+      "path": "/markets.html",
+      "views": 7,
+      "users": 2
     },
     {
-      "path": "/markets.html",
-      "views": 8,
+      "path": "/index.html",
+      "views": 6,
       "users": 3
     },
     {
