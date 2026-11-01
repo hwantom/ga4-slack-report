@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31 12:41:01 (KST)",
+  "updated_at": "2026-11-01 12:47:56 (KST)",
   "kpi": {
     "users": 0,
     "sessions": 0,
@@ -9,21 +9,21 @@
   "changes": {
     "users": {
       "current": 0,
-      "previous": 1,
-      "rate": -100.0,
-      "rate_str": "▼ 100.0%"
+      "previous": 0,
+      "rate": 0.0,
+      "rate_str": "- 0.0%"
     },
     "sessions": {
       "current": 0,
-      "previous": 1,
-      "rate": -100.0,
-      "rate_str": "▼ 100.0%"
+      "previous": 0,
+      "rate": 0.0,
+      "rate_str": "- 0.0%"
     },
     "page_views": {
       "current": 0,
-      "previous": 1,
-      "rate": -100.0,
-      "rate_str": "▼ 100.0%"
+      "previous": 0,
+      "rate": 0.0,
+      "rate_str": "- 0.0%"
     },
     "key_events": {
       "current": 0,
@@ -33,11 +33,6 @@
     }
   },
   "trends_7d": [
-    {
-      "date": "2026-10-24",
-      "users": 0,
-      "sessions": 1
-    },
     {
       "date": "2026-10-29",
       "users": 1,
@@ -49,19 +44,9 @@
       "source": "instagram",
       "sessions": 1,
       "users": 1
-    },
-    {
-      "source": "marker_click",
-      "sessions": 1,
-      "users": 0
     }
   ],
   "top_pages": [
-    {
-      "path": "/",
-      "views": 1,
-      "users": 0
-    },
     {
       "path": "/index.html",
       "views": 1,
