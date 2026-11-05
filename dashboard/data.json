@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-04 13:26:05 (KST)",
+  "updated_at": "2026-11-05 13:42:14 (KST)",
   "kpi": {
     "users": 0,
     "sessions": 0,
@@ -9,21 +9,21 @@
   "changes": {
     "users": {
       "current": 0,
-      "previous": 1,
-      "rate": -100.0,
-      "rate_str": "▼ 100.0%"
+      "previous": 0,
+      "rate": 0.0,
+      "rate_str": "- 0.0%"
     },
     "sessions": {
       "current": 0,
-      "previous": 1,
-      "rate": -100.0,
-      "rate_str": "▼ 100.0%"
+      "previous": 0,
+      "rate": 0.0,
+      "rate_str": "- 0.0%"
     },
     "page_views": {
       "current": 0,
-      "previous": 1,
-      "rate": -100.0,
-      "rate_str": "▼ 100.0%"
+      "previous": 0,
+      "rate": 0.0,
+      "rate_str": "- 0.0%"
     },
     "key_events": {
       "current": 0,
