@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-11-12 14:21:52 (KST)",
+  "updated_at": "2026-11-13 13:37:07 (KST)",
   "kpi": {
-    "users": 1,
-    "sessions": 1,
-    "page_views": 2,
+    "users": 0,
+    "sessions": 0,
+    "page_views": 0,
     "key_events": 0
   },
   "changes": {
     "users": {
-      "current": 1,
-      "previous": 0,
-      "rate": 100.0,
-      "rate_str": "▲ 100.0%"
+      "current": 0,
+      "previous": 1,
+      "rate": -100.0,
+      "rate_str": "▼ 100.0%"
     },
     "sessions": {
-      "current": 1,
-      "previous": 0,
-      "rate": 100.0,
-      "rate_str": "▲ 100.0%"
+      "current": 0,
+      "previous": 1,
+      "rate": -100.0,
+      "rate_str": "▼ 100.0%"
     },
     "page_views": {
-      "current": 2,
-      "previous": 0,
-      "rate": 100.0,
-      "rate_str": "▲ 100.0%"
+      "current": 0,
+      "previous": 2,
+      "rate": -100.0,
+      "rate_str": "▼ 100.0%"
     },
     "key_events": {
       "current": 0,
@@ -33,11 +33,6 @@
     }
   },
   "trends_7d": [
-    {
-      "date": "2026-11-05",
-      "users": 1,
-      "sessions": 1
-    },
     {
       "date": "2026-11-06",
       "users": 0,
@@ -56,11 +51,6 @@
   ],
   "traffic_sources": [
     {
-      "source": "qr",
-      "sessions": 2,
-      "users": 2
-    },
-    {
       "source": "(direct)",
       "sessions": 1,
       "users": 1
@@ -69,13 +59,18 @@
       "source": "map",
       "sessions": 1,
       "users": 0
+    },
+    {
+      "source": "qr",
+      "sessions": 1,
+      "users": 1
     }
   ],
   "top_pages": [
     {
       "path": "/index.html",
-      "views": 2,
-      "users": 2
+      "views": 1,
+      "users": 1
     },
     {
       "path": "/map.html",
