@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-11-14 13:31:38 (KST)",
+  "updated_at": "2026-11-15 13:20:03 (KST)",
   "kpi": {
     "users": 1,
     "sessions": 1,
-    "page_views": 1,
+    "page_views": 10,
     "key_events": 0
   },
   "changes": {
     "users": {
       "current": 1,
-      "previous": 0,
-      "rate": 100.0,
-      "rate_str": "▲ 100.0%"
+      "previous": 1,
+      "rate": 0.0,
+      "rate_str": "- 0.0%"
     },
     "sessions": {
       "current": 1,
-      "previous": 0,
-      "rate": 100.0,
-      "rate_str": "▲ 100.0%"
+      "previous": 1,
+      "rate": 0.0,
+      "rate_str": "- 0.0%"
     },
     "page_views": {
-      "current": 1,
-      "previous": 0,
-      "rate": 100.0,
-      "rate_str": "▲ 100.0%"
+      "current": 10,
+      "previous": 1,
+      "rate": 900.0,
+      "rate_str": "▲ 900.0%"
     },
     "key_events": {
       "current": 0,
@@ -47,9 +47,19 @@
       "date": "2026-11-13",
       "users": 1,
       "sessions": 1
+    },
+    {
+      "date": "2026-11-14",
+      "users": 1,
+      "sessions": 1
     }
   ],
   "traffic_sources": [
+    {
+      "source": "qr",
+      "sessions": 2,
+      "users": 2
+    },
     {
       "source": "(direct)",
       "sessions": 1,
@@ -59,26 +69,31 @@
       "source": "instagram",
       "sessions": 1,
       "users": 1
-    },
-    {
-      "source": "qr",
-      "sessions": 1,
-      "users": 1
     }
   ],
   "top_pages": [
     {
       "path": "/index.html",
-      "views": 2,
-      "users": 2
+      "views": 8,
+      "users": 3
     },
     {
-      "path": "/shop/dosirakcafe",
-      "views": 1,
+      "path": "/markets.html",
+      "views": 2,
       "users": 1
     },
     {
       "path": "/stores.html",
+      "views": 2,
+      "users": 2
+    },
+    {
+      "path": "/map.html",
+      "views": 1,
+      "users": 1
+    },
+    {
+      "path": "/shop/dosirakcafe",
       "views": 1,
       "users": 1
     }
