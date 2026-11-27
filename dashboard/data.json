@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 15:24:08 (KST)",
+  "updated_at": "2026-11-27 15:13:17 (KST)",
   "kpi": {
     "users": 1,
     "sessions": 1,
@@ -9,21 +9,21 @@
   "changes": {
     "users": {
       "current": 1,
-      "previous": 0,
-      "rate": 100.0,
-      "rate_str": "▲ 100.0%"
+      "previous": 1,
+      "rate": 0.0,
+      "rate_str": "- 0.0%"
     },
     "sessions": {
       "current": 1,
-      "previous": 0,
-      "rate": 100.0,
-      "rate_str": "▲ 100.0%"
+      "previous": 1,
+      "rate": 0.0,
+      "rate_str": "- 0.0%"
     },
     "page_views": {
       "current": 1,
-      "previous": 0,
-      "rate": 100.0,
-      "rate_str": "▲ 100.0%"
+      "previous": 1,
+      "rate": 0.0,
+      "rate_str": "- 0.0%"
     },
     "key_events": {
       "current": 0,
@@ -52,16 +52,21 @@
       "date": "2026-11-25",
       "users": 1,
       "sessions": 1
+    },
+    {
+      "date": "2026-11-26",
+      "users": 1,
+      "sessions": 1
     }
   ],
   "traffic_sources": [
     {
-      "source": "(direct)",
-      "sessions": 2,
-      "users": 2
+      "source": "qr",
+      "sessions": 3,
+      "users": 3
     },
     {
-      "source": "qr",
+      "source": "(direct)",
       "sessions": 2,
       "users": 2
     }
@@ -69,8 +74,8 @@
   "top_pages": [
     {
       "path": "/index.html",
-      "views": 3,
-      "users": 3
+      "views": 4,
+      "users": 4
     },
     {
       "path": "/map.html",
